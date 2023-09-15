@@ -12,6 +12,7 @@
     --hovericon: #31d0aa;
     --dairy: #fcfcfc;
     --navyblue_modal: rgba(46, 47, 66, 0.4);
+    --common-black: #2f2f37;
 }
 /* Обнулення */
 html {
@@ -102,7 +103,6 @@ body {
     line-height: 1.17; /* 116.667% */
     letter-spacing: 0.54px;
     text-transform: uppercase;
-    margin-right: 76px;
 }
 
 .sublogo {
@@ -938,9 +938,8 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 .burger_links {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
     margin-top: 72px;
+    min-height: 528px;
 }
 
 .burger_nav {
@@ -963,7 +962,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     text-transform: capitalize;
 }
 
-a.burger_nav_link .strcolor {
+.burger_nav_item:first-child a.strcolor {
     color: var(--ocean);
 }
 
@@ -979,6 +978,7 @@ a.burger_nav_link .strcolor {
     align-items: flex-start;
     row-gap: 24px;
     margin-bottom: 48px;
+    flex-grow: 0;
 }
 .burger_contacts_item {
 }
@@ -995,11 +995,16 @@ a.burger_nav_link .strcolor {
     color: var(--iris);
 }
 
+.burger_contacts_item:first-child a.strcolor {
+    color: var(--ocean);
+}
+
 .burger_social_icons {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
+    flex-grow: 0;
 }
 
 /* ------ADAPTIVE------ */
@@ -1011,6 +1016,7 @@ a.burger_nav_link .strcolor {
 
     .header {
         justify-content: space-between;
+        align-items: center;
     }
 
     .header a {
@@ -1018,6 +1024,14 @@ a.burger_nav_link .strcolor {
     }
 
     .header_burger {
+        display: block;
+        background: transparent;
+        width: 24px;
+        height: 24px;
+    }
+
+    .header_burger svg {
+        fill: var(--common-black);
     }
 
     .header-nav,
@@ -1078,6 +1092,10 @@ a.burger_nav_link .strcolor {
 @media screen and (min-width: 321px) {
     .header a {
         padding: 24px 0;
+    }
+
+    .logo {
+        margin-right: 76px;
     }
 
     .header_burger {
@@ -1222,5 +1240,12 @@ a.burger_nav_link .strcolor {
 
     .container_modal {
         padding: 72px 24px 24px;
+    }
+}
+
+@media (min-resolution: 192dpi) {
+    .section-main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office2x.jpg);
     }
 }
