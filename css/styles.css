@@ -656,12 +656,6 @@ a.nav-menu:focus {
     pointer-events: none;
 }
 
-.is_open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
 .modal_win {
     position: absolute;
     top: 50%;
@@ -873,15 +867,9 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 01;
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
-
-.is_open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
 }
 
 .burger_menu {
@@ -1007,6 +995,12 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     flex-grow: 0;
 }
 
+.is_open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 /* ------ADAPTIVE------ */
 /* до 320 */
 @media screen and (max-width: 320px) {
@@ -1014,29 +1008,8 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
         max-width: 320px;
     }
 
-    .header {
-        justify-content: space-between;
-        align-items: center;
-    }
-
     .header a {
         padding: 17.5px 0;
-    }
-
-    .header_burger {
-        display: block;
-        background: transparent;
-        width: 24px;
-        height: 24px;
-    }
-
-    .header_burger svg {
-        fill: var(--common-black);
-    }
-
-    .header-nav,
-    .address_data {
-        display: none;
     }
 
     .section-main {
@@ -1098,10 +1071,6 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
         margin-right: 76px;
     }
 
-    .header_burger {
-        display: none;
-    }
-
     .title-main {
         font-size: 56px;
         line-height: 1.07;
@@ -1155,6 +1124,27 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 
 /* до 768 */
 @media screen and (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_burger {
+        display: block;
+        background: transparent;
+        width: 24px;
+        height: 24px;
+    }
+
+    .header_burger svg {
+        fill: var(--common-black);
+    }
+
+    .header-nav,
+    .address_data {
+        display: none;
+    }
+
     .section-vh,
     .section-our_team,
     .section-our_portfolio,
@@ -1192,6 +1182,10 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 @media screen and (min-width: 769px) {
     .container {
         max-width: 1158px;
+    }
+
+    .header_burger {
+        display: none;
     }
 
     .section-main {
