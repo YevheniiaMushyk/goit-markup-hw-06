@@ -877,7 +877,9 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     top: 0;
     left: 50%;
     transform: translateX(-50%) scale(1);
-    width: 320px;
+    width: 50%;
+
+    min-width: 320px;
     min-height: 640px;
     background: var(--white);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
