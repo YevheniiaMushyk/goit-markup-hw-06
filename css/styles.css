@@ -177,7 +177,6 @@ a.nav-menu:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 3px;
     flex-wrap: wrap;
     flex-grow: 1;
 }
@@ -186,7 +185,6 @@ a.nav-menu:focus {
     display: flex;
     align-items: center;
     column-gap: 40px;
-    padding: 0 3px;
     flex-wrap: wrap;
 }
 
@@ -354,9 +352,8 @@ a.nav-menu:focus {
 
 .card_content {
     text-align: center;
-    padding: 32px 0;
+    padding: 32px 16px;
     width: 100%;
-    margin: 0 16px;
 }
 
 .card_content h3 {
@@ -608,7 +605,6 @@ a.nav-menu:focus {
 
 .footer-placeholder {
     color: var(--white);
-    width: 264px;
     height: 40px;
     border: 1px solid var(--white);
     border-radius: 4px;
@@ -887,7 +883,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 }
 
 .container_burger {
-    padding: 24px 24px 40px 16px;
+    padding: 72px 24px 40px 16px;
 }
 
 .burger_close {
@@ -929,8 +925,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 .burger_links {
     display: flex;
     flex-direction: column;
-    margin-top: 72px;
-    min-height: 528px;
+    height: 100%;
 }
 
 .burger_nav {
@@ -1069,8 +1064,8 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     }
 }
 
-/* з 321 до 768 */
-@media screen and (min-width: 321px) and (max-width: 768px) {
+/* з 321 до 767 */
+@media screen and (min-width: 321px) and (max-width: 767px) {
     .container {
         max-width: 768px;
     }
@@ -1104,8 +1099,8 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     }
 }
 
-/* до 768 */
-@media screen and (max-width: 768px) {
+/* до 767 */
+@media screen and (max-width: 767px) {
     .header {
         justify-content: space-between;
         align-items: center;
@@ -1171,6 +1166,10 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
         justify-content: center;
     }
 
+    .footer-placeholder {
+        width: 288px;
+    }
+
     .modal_win {
         width: 288px;
         min-height: 623px;
@@ -1181,8 +1180,8 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     }
 }
 
-/* з 769 */
-@media screen and (min-width: 769px) {
+/* з 768 */
+@media screen and (min-width: 768px) {
     .container {
         max-width: 1158px;
     }
@@ -1228,6 +1227,10 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 
     .footer-social_link {
         margin-right: 80px;
+    }
+
+    .footer-placeholder {
+        width: 264px;
     }
 
     .modal_win {
