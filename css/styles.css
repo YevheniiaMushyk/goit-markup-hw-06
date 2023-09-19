@@ -175,8 +175,7 @@ a.nav-menu:focus {
 
 .header-nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-grow: 1;
 }
@@ -877,7 +876,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     height: 100%;
 
     min-width: 320px;
-    min-height: 640px;
+    height: 100%;
     background: var(--white);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -934,7 +933,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: 40px;
-    flex: 1 0 151px;
+    flex-grow: 1;
 }
 .burger_nav_item {
 }
