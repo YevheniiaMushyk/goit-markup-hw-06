@@ -878,6 +878,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     left: 50%;
     transform: translateX(-50%) scale(1);
     width: 100%;
+    height: 100%;
 
     min-width: 320px;
     min-height: 640px;
@@ -991,7 +992,7 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 
 .burger_social_icons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 40px;
     flex-grow: 0;
@@ -1039,27 +1040,6 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
 
     .section-op_list_item {
         flex: 0 0 288px;
-    }
-
-    .footer-form {
-        justify-content: center;
-    }
-
-    .social_icons {
-        justify-content: center;
-    }
-
-    .footer-social_text {
-        text-align: center;
-    }
-
-    .footer {
-        justify-content: center;
-    }
-
-    .footer-logo_link {
-        display: inline-flex;
-        justify-content: center;
     }
 }
 
@@ -1168,6 +1148,27 @@ input.visually-hidden:checked + label.modal_chblabel span.modal_chbicon {
     .section-vh-main-text {
         font-weight: 500;
         align-self: stretch;
+    }
+
+    .footer-form {
+        justify-content: center;
+    }
+
+    .social_icons {
+        justify-content: center;
+    }
+
+    .footer-social_text {
+        text-align: center;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-logo_link {
+        display: inline-flex;
+        justify-content: center;
     }
 
     .modal_win {
